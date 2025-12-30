@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srinivas Yad | Portfolio</title>
+    <meta name="description" content="Portfolio of Srinivas Yad, an aspiring Software Developer and CSE student.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">Srinivas<span class="accent">.</span></a>
+
+            <nav class="nav">
+                <ul class="nav-list" id="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero section">
+            <div class="container hero-container">
+                <div class="hero-content fade-in-up">
+                    <p class="greeting">Hi, I am</p>
+                    <h1 class="name">Srinivas Yad</h1>
+                    <h2 class="title">Student | <span class="gradient-text">Aspiring Software Developer</span></h2>
+                    <p class="description">
+                        Computer Science student passionate about building software solutions and AI-powered
+                        applications. Focused on learning by building real-world projects.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="https://drive.google.com/file/d/1inbTms_iTdpW1gLzfUp09zyxoVaCff3C/view" target="_blank"
+                            class="btn btn-secondary">Download Resume <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                    <div class="social-hero">
+                        <a href="https://github.com/srinivasyad" target="_blank" aria-label="GitHub"><i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/srinivas-yad-025818278" target="_blank"
+                            aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="mailto:srinivasyad05@gmail.com" aria-label="Email"><i
+                                class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="hero-visual fade-in">
+                    <div class="abstract-shape"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <h2 class="section-title">About Me</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-card fade-in-up">
+                        <i class="fa-solid fa-graduation-cap icon"></i>
+                        <h3>Education</h3>
+                        <p><strong>CSE – New Horizon College of Engineering</strong></p>
+                        <p class="sub-text">CGPA: 7.47 | 2026 Batch</p>
+                    </div>
+                    <div class="about-card fade-in-up" style="animation-delay: 0.1s;">
+                        <i class="fa-solid fa-bullseye icon"></i>
+                        <h3>Goal</h3>
+                        <p>To become a <strong>Software Developer</strong> or <strong>AI Engineer</strong> creating
+                            impactful solutions.</p>
+                    </div>
+                    <div class="about-card fade-in-up" style="animation-delay: 0.2s;">
+                        <i class="fa-solid fa-heart icon"></i>
+                        <h3>Passion</h3>
+                        <p>I love solving complex problems and exploring new technologies in Artificial Intelligence and
+                            Web Development.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <h2 class="section-title">Technical Skills</h2>
+                </div>
+
+                <div class="skills-wrapper">
+                    <div class="skill-category fade-in-up">
+                        <h3><i class="fa-solid fa-code"></i> Programming</h3>
+                        <div class="tags">
+                            <span>C</span>
+                            <span>Java</span>
+                            <span>Python</span>
+                            <span>SQL</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category fade-in-up" style="animation-delay: 0.1s;">
+                        <h3><i class="fa-solid fa-globe"></i> Web Development</h3>
+                        <div class="tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>React (Learning)</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category fade-in-up" style="animation-delay: 0.2s;">
+                        <h3><i class="fa-solid fa-database"></i> Databases</h3>
+                        <div class="tags">
+                            <span>MySQL</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category fade-in-up" style="animation-delay: 0.3s;">
+                        <h3><i class="fa-solid fa-screwdriver-wrench"></i> Tools & Core CS</h3>
+                        <div class="tags">
+                            <span>GitHub</span>
+                            <span>VS Code</span>
+                            <span>IntelliJ IDEA</span>
+                            <span>DSA</span>
+                            <span>OOP</span>
+                            <span>DBMS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <h2 class="section-title">Projects</h2>
+                </div>
+                <div class="projects-grid">
+
+                    <!-- Feature Project 1 -->
+                    <article class="project-card fade-in-up">
+                        <div class="card-content">
+                            <h3 class="card-title">VidLip-Reader</h3>
+                            <p class="card-desc">AI-based lip-reading system that translates lip movements into text
+                                using CNN-LSTM architecture.</p>
+                            <div class="features-list">
+                                <small>• Video Preprocessing</small>
+                                <small>• Multilingual Translation</small>
+                            </div>
+                            <div class="tech-stack">
+                                <span>Python</span>
+                                <span>TensorFlow</span>
+                                <span>OpenCV</span>
+                                <span>Streamlit</span>
+                            </div>
+                            <div class="card-links">
+                                <a href="https://github.com/srinivasyad" target="_blank" class="link-btn">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Feature Project 2 -->
+                    <article class="project-card fade-in-up" style="animation-delay: 0.1s;">
+                        <div class="card-content">
+                            <h3 class="card-title">University Management System</h3>
+                            <p class="card-desc">Comprehensive Java application for managing university ecosystem
+                                including student and faculty data.</p>
+                            <div class="features-list">
+                                <small>• Secure JDBC Operations</small>
+                                <small>• Faculty Management</small>
+                            </div>
+                            <div class="tech-stack">
+                                <span>Java</span>
+                                <span>MySQL</span>
+                                <span>JDBC</span>
+                            </div>
+                            <div class="card-links">
+                                <a href="https://github.com/srinivasyad" target="_blank" class="link-btn">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Feature Project 3 -->
+                    <article class="project-card fade-in-up" style="animation-delay: 0.2s;">
+                        <div class="card-content">
+                            <h3 class="card-title">Book Management System</h3>
+                            <p class="card-desc">Desktop application built for efficient library and inventory tracking
+                                with an admin panel.</p>
+                            <div class="features-list">
+                                <small>• Authentication</small>
+                                <small>• Inventory Management</small>
+                            </div>
+                            <div class="tech-stack">
+                                <span>Python</span>
+                                <span>Tkinter</span>
+                                <span>SQLite</span>
+                            </div>
+                            <div class="card-links">
+                                <a href="https://github.com/srinivasyad" target="_blank" class="link-btn">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="achievements section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <h2 class="section-title">Achievements</h2>
+                </div>
+                <div class="achievements-list">
+                    <div class="achievement-item fade-in-up">
+                        <div class="icon-box"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                        <div class="text">
+                            <h4>NSS Volunteer</h4>
+                            <p>Organized Blood Donation Drive collecting 500+ units, demonstrating leadership and
+                                community service.</p>
+                        </div>
+                    </div>
+                    <div class="achievement-item fade-in-up" style="animation-delay: 0.1s;">
+                        <div class="icon-box"><i class="fa-solid fa-brain"></i></div>
+                        <div class="text">
+                            <h4>Technical Quizzes</h4>
+                            <p>Active participant in various technical and coding quizzes, enhancing problem-solving
+                                skills.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <h2 class="section-title">Get In Touch</h2>
+                </div>
+                <div class="contact-wrapper fade-in-up">
+                    <div class="contact-card">
+                        <i class="fa-solid fa-envelope"></i>
+                        <h3>Email</h3>
+                        <a href="mailto:srinivasyad05@gmail.com">srinivasyad05@gmail.com</a>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fa-solid fa-phone"></i>
+                        <h3>Phone</h3>
+                        <a href="tel:+916360727226">+91 6360727226</a>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/srinivas-yad-025818278" target="_blank">View Profile</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Srinivas Yad. Built with passion.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/srinivasyad" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/srinivas-yad-025818278" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
