@@ -1,31 +1,40 @@
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const htmlElement = document.documentElement;
-    const icon = themeToggle.querySelector('i');
-    // Check saved theme
-    const savedTheme = localStorage.getItem('theme');
+    
+    // Default to dark theme if not explicitly saved
+    const savedTheme = localStorage.getItem('theme') || 'dark';
     if (savedTheme === 'light') {
         htmlElement.setAttribute('data-theme', 'light');
         htmlElement.classList.remove('dark');
-        icon.classList.replace('fa-sun', 'fa-moon');
     } else {
         htmlElement.setAttribute('data-theme', 'dark');
         htmlElement.classList.add('dark');
-        icon.classList.replace('fa-moon', 'fa-sun');
     }
-    themeToggle.addEventListener('click', () => {
-        if (htmlElement.getAttribute('data-theme') === 'light') {
-            htmlElement.setAttribute('data-theme', 'dark');
-            htmlElement.classList.add('dark');
-            localStorage.setItem('theme', 'dark');
-            icon.classList.replace('fa-moon', 'fa-sun');
-        } else {
-            htmlElement.setAttribute('data-theme', 'light');
-            htmlElement.classList.remove('dark');
-            localStorage.setItem('theme', 'light');
-            icon.classList.replace('fa-sun', 'fa-moon');
+
+    if (themeToggle) {
+        const icon = themeToggle.querySelector('i');
+        if (icon) {
+            if (savedTheme === 'light') {
+                icon.classList.replace('fa-sun', 'fa-moon');
+            } else {
+                icon.classList.replace('fa-moon', 'fa-sun');
+            }
         }
-    });
+        themeToggle.addEventListener('click', () => {
+            if (htmlElement.getAttribute('data-theme') === 'light') {
+                htmlElement.setAttribute('data-theme', 'dark');
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                if (icon) icon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                htmlElement.setAttribute('data-theme', 'light');
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                if (icon) icon.classList.replace('fa-sun', 'fa-moon');
+            }
+        });
+    }
     const scrollProgress = document.createElement('div');
     scrollProgress.className = 'scroll-progress';
     document.body.appendChild(scrollProgress);
@@ -133,11 +142,18 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let i = 0; i < 50; i++) {
             const particle = document.createElement('div');
             particle.className = 'particle';
+            // Randomly choose color between saffron, orange, and gold for matching nebula look
+            const colors = [
+                `rgba(255, 153, 51, ${Math.random() * 0.5 + 0.2})`, // Saffron
+                `rgba(234, 88, 12, ${Math.random() * 0.5 + 0.2})`,  // Orange
+                `rgba(251, 191, 36, ${Math.random() * 0.5 + 0.2})`  // Amber Gold
+            ];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
             particle.style.cssText = `
                 position: absolute;
-                width: ${Math.random() * 4 + 1}px;
-                height: ${Math.random() * 4 + 1}px;
-                background: rgba(99, 102, 241, ${Math.random() * 0.5 + 0.2});
+                width: ${Math.random() * 3 + 1}px;
+                height: ${Math.random() * 3 + 1}px;
+                background: ${randomColor};
                 border-radius: 50%;
                 left: ${Math.random() * 100}%;
                 top: ${Math.random() * 100}%;
@@ -148,6 +164,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     createParticles();
+
+
     const skillTags = document.querySelectorAll('.tags span');
     const skillObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry, index) => {
