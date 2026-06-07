@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Pacifico&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -34,9 +34,7 @@
                     <li><a href="#projects" class="nav-link">Projects</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
-                    <i class="fa-solid fa-sun"></i>
-                </button>
+
                 <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
                     <i class="fa-solid fa-bars"></i>
                 </button>
@@ -47,33 +45,61 @@
     <main>
 
         <section id="home" class="hero section">
-            <div class="container hero-container">
-                <div class="hero-content fade-in-up">
-                    <p class="greeting">Hi, I am</p>
-                    <h1 class="name">Srinivas</h1>
-                    <h2 class="title">Student | <span class="gradient-text">Aspiring Software Developer</span></h2>
-                    <p class="description">
+            <div class="constellation-bg"></div>
+
+            <div class="hero-constellation-container">
+                <!-- Center Node -->
+                <div class="constellation-center-node fade-in">
+                    <h1 class="neon-name">Srinivas.</h1>
+                    <p class="neon-description">
                         Computer Science student passionate about building software solutions and AI-powered
                         applications. Focused on learning by building real-world projects.
                     </p>
-                    <div class="cta-buttons">
-                        <a href="#projects" class="btn btn-primary">View Projects</a>
-                        <a href="https://drive.google.com/file/d/1tmPwCTZCzXCekJ-6z17k8q9c3mnEF2-i/view?usp=sharing" target="_blank"
-                            rel="noopener noreferrer" class="btn btn-secondary">Download Resume <i
-                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                    <div class="social-hero">
+                    <div class="neon-socials">
                         <a href="https://github.com/srinivasyad" target="_blank" rel="noopener noreferrer"
-                            aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            aria-label="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
                         <a href="https://www.linkedin.com/in/srinivas-yad-025818278" target="_blank"
-                            rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="mailto:srinivasyad05@gmail.com" aria-label="Email"><i
-                                class="fa-solid fa-envelope"></i></a>
+                            rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:srinivasyad05@gmail.com" aria-label="Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="hero-visual fade-in">
-                    <div class="abstract-shape"></div>
+
+                <!-- Floating Constellation Nodes -->
+                <!-- Node 1: Education (Top Left) -->
+                <div class="constellation-node node-education" id="node-edu">
+                    <div class="node-star"></div>
+                    <div class="node-label">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span>CSE - New Horizon College</span>
+                    </div>
                 </div>
+
+
+
+                <!-- Node 5: View Projects Button (Mid/Lower Left) -->
+                <div class="constellation-node node-projects" id="node-projects">
+                    <div class="node-star"></div>
+                    <a href="#projects" class="glass-btn">View Projects</a>
+                </div>
+
+                <!-- Node 6: Download Resume Button (Mid Right-ish) -->
+                <div class="constellation-node node-resume" id="node-resume">
+                    <div class="node-star"></div>
+                    <a href="https://drive.google.com/file/d/1btESy8XhaYWIy5XP5KbbI9jLOKGHlazw/view?usp=sharing"
+                        target="_blank" rel="noopener noreferrer" class="glass-btn">
+                        Download Resume <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="decor-star-bottom-right">
+                <i class="fa-solid fa-star"></i>
             </div>
         </section>
 
@@ -88,7 +114,7 @@
                         <i class="fa-solid fa-graduation-cap icon"></i>
                         <h3>Education</h3>
                         <p><strong>CSE – New Horizon College of Engineering</strong></p>
-                        <p class="sub-text">CGPA: 8.3 | 2026 Batch</p>
+                        <p class="sub-text">CGPA: 7.66 | 2026 Batch</p>
                     </div>
                     <div class="about-card fade-in-up" class="delay-1">
                         <i class="fa-solid fa-bullseye icon"></i>
@@ -481,7 +507,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
 </body>
 
 </html>
